@@ -236,7 +236,7 @@ writeLoop:
 				buf.WriteString(regexp.QuoteMeta(string(c)))
 			}
 		default:
-			if c > 128 {
+			if c >= 128 {
 				buf.WriteByte(c)
 			} else {
 				buf.WriteString(regexp.QuoteMeta(string(c)))
